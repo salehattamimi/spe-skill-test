@@ -1,15 +1,17 @@
 <?php
-$angka1 = array ('1', '2', '3', '4', '5', '6');
-
+function array_blue_ocean($angka1 = array(),$angka2){
  
-$angka2 = array_search('2', $angka1);
+$angka_search = array_search($angka2, $angka1);
  
-if ($angka2 !== false) {
+if ($angka_search !== false) {
 
     // Hapus Array
-    unset($angka1[$angka2]);
+    unset($angka1[$angka_search]);
 }
 
 foreach ($angka1 as $key => $val) {
     echo $val.',';
  }
+}
+
+array_blue_ocean([1,2,3,4,5,6],1);
